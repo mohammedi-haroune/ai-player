@@ -1,0 +1,4 @@
+[error] /home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/project/Dependencies.scala:74:55: value kafka is not a member of object Version
+[error]   val kafka = "org.apache.kafka" %% "kafka" % Version.kafka
+[error]                                                       ^
+[error] one error found
