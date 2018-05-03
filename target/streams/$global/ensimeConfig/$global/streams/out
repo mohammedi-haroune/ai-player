@@ -1,1 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0morg.ensime.EnsimePlugin$$anon$1: To ignore this error (i.e. you have multiple scala versions), add `ensimeIgnoreScalaMismatch in ThisBuild := true` or `ensimeIgnoreScalaMismatch in LocalProject("mpv-controler") := true` to your ensime.sbt[0m
