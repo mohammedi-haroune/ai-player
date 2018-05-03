@@ -7,22 +7,10 @@
 		revision="0.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180423223054"/>
+		date="20180501144057"/>
 	<dependencies>
-		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.12.5" status="release" pubdate="20180316144401" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
-				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.5/scala-reflect-2.12.5.pom"/>
-				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="0.1" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/"/>
-				<artifacts>
-					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="587734" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.12.5-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.5/scala-reflect-2.12.5-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="uk.com.robust-it" name="cloning">
-			<revision name="1.9.3" status="release" pubdate="20160918224933" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://code.google.com/p/cloning/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
+			<revision name="1.9.3" status="release" pubdate="20160918224933" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://code.google.com/p/cloning/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3925" time="0" location="/home/mohammedi/.ivy2/cache/uk.com.robust-it/cloning/ivy-1.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/uk/com/robust-it/cloning/1.9.3/cloning-1.9.3.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.9.3" rev-constraint-default="1.9.3" rev-constraint-dynamic="1.9.3" callerrev="0.1"/>
@@ -34,7 +22,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="hdf5">
-			<revision name="1.10.1-1.4.1" status="release" pubdate="20180329014500" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
+			<revision name="1.10.1-1.4.1" status="release" pubdate="20180329014500" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -48,7 +36,7 @@
 			</revision>
 		</module>
 		<module organisation="net.ericaro" name="neoitertools">
-			<revision name="1.0.0" status="release" pubdate="20110507001010" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://${googlecode}.googlecode.com/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+			<revision name="1.0.0" status="release" pubdate="20110507001010" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://${googlecode}.googlecode.com/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2895" time="0" location="/home/mohammedi/.ivy2/cache/net.ericaro/neoitertools/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/ericaro/neoitertools/1.0.0/neoitertools-1.0.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.1"/>
@@ -60,7 +48,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.collections" name="eclipse-collections-api">
-			<revision name="9.1.0" status="release" pubdate="20171231182646" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
+			<revision name="9.1.0" status="release" pubdate="20171231182646" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
 				<license name="Eclipse Public License - v 1.0" url="https://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="Eclipse Distribution License - v 1.0" url="https://www.eclipse.org/licenses/edl-v10.html"/>
 				<metadata-artifact status="no" details="" size="5899" time="0" location="/home/mohammedi/.ivy2/cache/org.eclipse.collections/eclipse-collections-api/ivy-9.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/collections/eclipse-collections-api/9.1.0/eclipse-collections-api-9.1.0.pom"/>
@@ -73,7 +61,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="leptonica">
-			<revision name="1.75.3-1.4.1" status="release" pubdate="20180329035338" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="59">
+			<revision name="1.75.3-1.4.1" status="release" pubdate="20180329035338" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="60">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -86,8 +74,20 @@
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.12.5" status="release" pubdate="20180316144401" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="30">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.5/scala-reflect-2.12.5.pom"/>
+				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="0.1" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="587734" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.12.5-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.5/scala-reflect-2.12.5-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.5" status="release" pubdate="20180316144746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="41">
+			<revision name="2.12.5" status="release" pubdate="20180316144746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="42">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.5/scala-library-2.12.5.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="0.1" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/"/>
@@ -135,7 +135,7 @@
 			</revision>
 		</module>
 		<module organisation="org.deeplearning4j" name="deeplearning4j-utility-iterators">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180406005704" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180406005704" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10964" time="0" location="/home/mohammedi/.ivy2/cache/org.deeplearning4j/deeplearning4j-utility-iterators/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/deeplearning4j/deeplearning4j-utility-iterators/1.0.0-alpha/deeplearning4j-utility-iterators-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -159,7 +159,7 @@
 			</revision>
 		</module>
 		<module organisation="org.datavec" name="datavec-data-image">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180405214955" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180405214955" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10305" time="0" location="/home/mohammedi/.ivy2/cache/org.datavec/datavec-data-image/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/datavec/datavec-data-image/1.0.0-alpha/datavec-data-image-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -171,7 +171,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-psd">
-			<revision name="3.1.1" status="release" pubdate="20150611111023" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
+			<revision name="3.1.1" status="release" pubdate="20150611111023" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
 				<metadata-artifact status="no" details="" size="6226" time="0" location="/home/mohammedi/.ivy2/cache/com.twelvemonkeys.imageio/imageio-psd/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-psd/3.1.1/imageio-psd-3.1.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="0.1"/>
 				<artifacts>
@@ -193,7 +193,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-jpeg">
-			<revision name="3.1.1" status="release" pubdate="20150611110641" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="56">
+			<revision name="3.1.1" status="release" pubdate="20150611110641" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
 				<metadata-artifact status="no" details="" size="6248" time="0" location="/home/mohammedi/.ivy2/cache/com.twelvemonkeys.imageio/imageio-jpeg/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-jpeg/3.1.1/imageio-jpeg-3.1.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="0.1"/>
 				<artifacts>
@@ -204,7 +204,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-metadata">
-			<revision name="3.1.1" status="release" pubdate="20150611110158" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+			<revision name="3.1.1" status="release" pubdate="20150611110158" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
 				<metadata-artifact status="no" details="" size="6050" time="0" location="/home/mohammedi/.ivy2/cache/com.twelvemonkeys.imageio/imageio-metadata/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-metadata/3.1.1/imageio-metadata-3.1.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="0.1"/>
 				<artifacts>
@@ -215,7 +215,7 @@
 			</revision>
 		</module>
 		<module organisation="org.deeplearning4j" name="deeplearning4j-util">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180406005030" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maven.apache.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180406005030" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maven.apache.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="9933" time="0" location="/home/mohammedi/.ivy2/cache/org.deeplearning4j/deeplearning4j-util/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/deeplearning4j/deeplearning4j-util/1.0.0-alpha/deeplearning4j-util-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -239,7 +239,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-parsing_2.12">
-			<revision name="10.0.10" status="release" pubdate="20170831153827" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
+			<revision name="10.0.10" status="release" pubdate="20170831153827" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
 				<license name="Apache-2.0" url="https://opensource.org/licenses/Apache-2.0"/>
 				<metadata-artifact status="no" details="" size="2948" time="0" location="/home/mohammedi/.ivy2/cache/com.typesafe.akka/akka-parsing_2.12/ivy-10.0.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.12/10.0.10/akka-parsing_2.12-10.0.10.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="10.0.10" rev-constraint-default="10.0.10" rev-constraint-dynamic="10.0.10" callerrev="0.1"/>
@@ -263,7 +263,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.code.gson" name="gson">
-			<revision name="2.7" status="release" pubdate="20160615005554" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
+			<revision name="2.7" status="release" pubdate="20160615005554" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3503" time="0" location="/home/mohammedi/.ivy2/cache/com.google.code.gson/gson/ivy-2.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.7/gson-2.7.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.7" rev-constraint-default="2.7" rev-constraint-dynamic="2.7" callerrev="0.1"/>
@@ -275,7 +275,7 @@
 			</revision>
 		</module>
 		<module organisation="com.github.os72" name="protobuf-java-shaded-351">
-			<revision name="0.9" status="release" pubdate="20180201040946" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+			<revision name="0.9" status="release" pubdate="20180201040946" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
 				<license name="3-Clause BSD License" url="https://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="5765" time="0" location="/home/mohammedi/.ivy2/cache/com.github.os72/protobuf-java-shaded-351/ivy-0.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/os72/protobuf-java-shaded-351/0.9/protobuf-java-shaded-351-0.9.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="0.9" rev-constraint-default="0.9" rev-constraint-dynamic="0.9" callerrev="0.1"/>
@@ -301,7 +301,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="flandmark">
-			<revision name="1.07-1.4.1" status="release" pubdate="20180329000749" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
+			<revision name="1.07-1.4.1" status="release" pubdate="20180329000749" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -315,7 +315,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="artoolkitplus">
-			<revision name="2.3.1-1.4.1" status="release" pubdate="20180329000401" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
+			<revision name="2.3.1-1.4.1" status="release" pubdate="20180329000401" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -329,7 +329,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="videoinput">
-			<revision name="0.200-1.4.1" status="release" pubdate="20180328212729" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
+			<revision name="0.200-1.4.1" status="release" pubdate="20180328212729" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -343,7 +343,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="libfreenect2">
-			<revision name="0.2.0-1.4.1" status="release" pubdate="20180328232502" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
+			<revision name="0.2.0-1.4.1" status="release" pubdate="20180328232502" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -357,7 +357,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="flycapture">
-			<revision name="2.11.3.121-1.4.1" status="release" pubdate="20180328225642" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+			<revision name="2.11.3.121-1.4.1" status="release" pubdate="20180328225642" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -371,7 +371,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="opencv">
-			<revision name="3.4.1-1.4.1" status="release" pubdate="20180329064928" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="60">
+			<revision name="3.4.1-1.4.1" status="release" pubdate="20180329064928" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -459,7 +459,7 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.25" status="release" pubdate="20170316173632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="45">
+			<revision name="1.7.25" status="release" pubdate="20170316173632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="46">
 				<metadata-artifact status="no" details="" size="5287" time="0" location="/home/mohammedi/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.1"/>
 				<artifacts>
@@ -494,7 +494,7 @@
 			</revision>
 		</module>
 		<module organisation="com.tdunning" name="t-digest">
-			<revision name="3.2" status="release" pubdate="20170807012411" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/tdunning/t-digest" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
+			<revision name="3.2" status="release" pubdate="20170807012411" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/tdunning/t-digest" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3963" time="0" location="/home/mohammedi/.ivy2/cache/com.tdunning/t-digest/ivy-3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/tdunning/t-digest/3.2/t-digest-3.2.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.2" rev-constraint-default="3.2" rev-constraint-dynamic="3.2" callerrev="0.1"/>
@@ -506,7 +506,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.guava" name="guava">
-			<revision name="19.0" status="release" pubdate="20151209215835" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+			<revision name="19.0" status="release" pubdate="20151209215835" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6356" time="0" location="/home/mohammedi/.ivy2/cache/com.google.guava/guava/ivy-19.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="19.0" rev-constraint-default="19.0" rev-constraint-dynamic="19.0" callerrev="0.1"/>
@@ -530,7 +530,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-native">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180405082543" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180405082543" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="13765" time="0" location="/home/mohammedi/.ivy2/cache/org.nd4j/nd4j-native/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/nd4j/nd4j-native/1.0.0-alpha/nd4j-native-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -554,7 +554,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-base64">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180405223330" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180405223330" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8763" time="0" location="/home/mohammedi/.ivy2/cache/org.nd4j/nd4j-base64/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/nd4j/nd4j-base64/1.0.0-alpha/nd4j-base64-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -566,7 +566,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-net" name="commons-net">
-			<revision name="3.1" status="release" pubdate="20120214194231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
+			<revision name="3.1" status="release" pubdate="20120214194231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8062" time="0" location="/home/mohammedi/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-net/commons-net/3.1/commons-net-3.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.1"/>
@@ -578,7 +578,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-native-api">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180405223317" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180405223317" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="56">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10346" time="0" location="/home/mohammedi/.ivy2/cache/org.nd4j/nd4j-native-api/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/nd4j/nd4j-native-api/1.0.0-alpha/nd4j-native-api-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -590,7 +590,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-buffer">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180405223238" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180405223238" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8050" time="0" location="/home/mohammedi/.ivy2/cache/org.nd4j/nd4j-buffer/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/nd4j/nd4j-buffer/1.0.0-alpha/nd4j-buffer-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -602,7 +602,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-context">
-			<revision name="1.0.0-alpha" status="release" pubdate="20180405223329" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
+			<revision name="1.0.0-alpha" status="release" pubdate="20180405223329" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7913" time="0" location="/home/mohammedi/.ivy2/cache/org.nd4j/nd4j-context/ivy-1.0.0-alpha.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/nd4j/nd4j-context/1.0.0-alpha/nd4j-context-1.0.0-alpha.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-alpha" rev-constraint-default="1.0.0-alpha" rev-constraint-dynamic="1.0.0-alpha" callerrev="0.1"/>
@@ -614,7 +614,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="mkl">
-			<revision name="2018.1-1.4.1" status="release" pubdate="20180329030453" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
+			<revision name="2018.1-1.4.1" status="release" pubdate="20180329030453" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -628,7 +628,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco.javacpp-presets" name="openblas">
-			<revision name="0.2.20-1.4.1" status="release" pubdate="20180329025248" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+			<revision name="0.2.20-1.4.1" status="release" pubdate="20180329025248" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -642,7 +642,7 @@
 			</revision>
 		</module>
 		<module organisation="com.clearspring.analytics" name="stream">
-			<revision name="2.7.0" status="release" pubdate="20140523144148" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/addthis/stream-lib" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
+			<revision name="2.7.0" status="release" pubdate="20140523144148" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/addthis/stream-lib" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4347" time="0" location="/home/mohammedi/.ivy2/cache/com.clearspring.analytics/stream/ivy-2.7.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.7.0" rev-constraint-default="2.7.0" rev-constraint-dynamic="2.7.0" callerrev="0.1"/>
@@ -654,7 +654,7 @@
 			</revision>
 		</module>
 		<module organisation="org.freemarker" name="freemarker">
-			<revision name="2.3.23" status="release" pubdate="20150705152822" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://freemarker.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
+			<revision name="2.3.23" status="release" pubdate="20150705152822" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://freemarker.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
 				<license name="Apache License, Version 2.0" url="http://freemarker.org/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="2948" time="0" location="/home/mohammedi/.ivy2/cache/org.freemarker/freemarker/ivy-2.3.23.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.3.23" rev-constraint-default="2.3.23" rev-constraint-dynamic="2.3.23" callerrev="0.1"/>
@@ -666,7 +666,7 @@
 			</revision>
 		</module>
 		<module organisation="joda-time" name="joda-time">
-			<revision name="2.9.2" status="release" pubdate="20160128144408" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
+			<revision name="2.9.2" status="release" pubdate="20160128144408" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6595" time="0" location="/home/mohammedi/.ivy2/cache/joda-time/joda-time/ivy-2.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.2/joda-time-2.9.2.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.1"/>
@@ -678,7 +678,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-codec" name="commons-codec">
-			<revision name="1.10" status="release" pubdate="20141106151535" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-codec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="58">
+			<revision name="1.10" status="release" pubdate="20141106151535" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-codec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="59">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10608" time="0" location="/home/mohammedi/.ivy2/cache/commons-codec/commons-codec/ivy-1.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.10" rev-constraint-default="1.10" rev-constraint-dynamic="1.10" callerrev="0.1"/>
@@ -690,7 +690,7 @@
 			</revision>
 		</module>
 		<module organisation="org.jetbrains" name="annotations">
-			<revision name="13.0" status="release" pubdate="20131217131043" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jetbrains.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
+			<revision name="13.0" status="release" pubdate="20131217131043" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jetbrains.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2908" time="0" location="/home/mohammedi/.ivy2/cache/org.jetbrains/annotations/ivy-13.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="13.0" rev-constraint-default="13.0" rev-constraint-dynamic="13.0" callerrev="0.1"/>
@@ -713,7 +713,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.common" name="common-image">
-			<revision name="3.1.1" status="release" pubdate="20150611110041" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
+			<revision name="3.1.1" status="release" pubdate="20150611110041" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
 				<metadata-artifact status="no" details="" size="4520" time="0" location="/home/mohammedi/.ivy2/cache/com.twelvemonkeys.common/common-image/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-image/3.1.1/common-image-3.1.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="0.1"/>
 				<artifacts>
@@ -724,7 +724,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.common" name="common-io">
-			<revision name="3.1.1" status="release" pubdate="20150611110019" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
+			<revision name="3.1.1" status="release" pubdate="20150611110019" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
 				<metadata-artifact status="no" details="" size="4392" time="0" location="/home/mohammedi/.ivy2/cache/com.twelvemonkeys.common/common-io/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-io/3.1.1/common-io-3.1.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="0.1"/>
 				<artifacts>
@@ -758,7 +758,7 @@
 			</revision>
 		</module>
 		<module organisation="io.aeron" name="aeron-driver">
-			<revision name="1.3.0" status="release" pubdate="20170514053938" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/real-logic/Aeron" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
+			<revision name="1.3.0" status="release" pubdate="20170514053938" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/real-logic/Aeron" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
 				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3067" time="0" location="/home/mohammedi/.ivy2/cache/io.aeron/aeron-driver/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/aeron/aeron-driver/1.3.0/aeron-driver-1.3.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="0.1"/>
@@ -770,7 +770,7 @@
 			</revision>
 		</module>
 		<module organisation="io.aeron" name="aeron-client">
-			<revision name="1.3.0" status="release" pubdate="20170514053926" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/real-logic/Aeron" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
+			<revision name="1.3.0" status="release" pubdate="20170514053926" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/real-logic/Aeron" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
 				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3063" time="0" location="/home/mohammedi/.ivy2/cache/io.aeron/aeron-client/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/aeron/aeron-client/1.3.0/aeron-client-1.3.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="0.1"/>
@@ -782,7 +782,7 @@
 			</revision>
 		</module>
 		<module organisation="org.agrona" name="agrona">
-			<revision name="0.9.6" status="release" pubdate="20170514051532" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/real-logic/Agrona" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
+			<revision name="0.9.6" status="release" pubdate="20170514051532" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/real-logic/Agrona" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="58">
 				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2893" time="0" location="/home/mohammedi/.ivy2/cache/org.agrona/agrona/ivy-0.9.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/agrona/agrona/0.9.6/agrona-0.9.6.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="0.9.6" rev-constraint-default="0.9.6" rev-constraint-dynamic="0.9.6" callerrev="0.1"/>
@@ -794,7 +794,7 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty">
-			<revision name="3.10.6.Final" status="release" pubdate="20160629134528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+			<revision name="3.10.6.Final" status="release" pubdate="20160629134528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="7197" time="0" location="/home/mohammedi/.ivy2/cache/io.netty/netty/ivy-3.10.6.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.10.6.Final/netty-3.10.6.Final.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.10.6.Final" rev-constraint-default="3.10.6.Final" rev-constraint-dynamic="3.10.6.Final" callerrev="0.1"/>
@@ -806,7 +806,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-protobuf_2.12">
-			<revision name="2.5.6" status="release" pubdate="20170929153802" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
+			<revision name="2.5.6" status="release" pubdate="20170929153802" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2807" time="0" location="/home/mohammedi/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.12/ivy-2.5.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.12/2.5.6/akka-protobuf_2.12-2.5.6.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.6" rev-constraint-default="2.5.6" rev-constraint-dynamic="2.5.6" callerrev="0.1" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6"/>
@@ -818,7 +818,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-stream-testkit_2.12">
-			<revision name="2.5.6" status="release" pubdate="20170929154046" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="84">
+			<revision name="2.5.6" status="release" pubdate="20170929154046" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3484" time="0" location="/home/mohammedi/.ivy2/cache/com.typesafe.akka/akka-stream-testkit_2.12/ivy-2.5.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-testkit_2.12/2.5.6/akka-stream-testkit_2.12-2.5.6.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.6" rev-constraint-default="2.5.6" rev-constraint-dynamic="2.5.6" callerrev="0.1" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6"/>
@@ -830,7 +830,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-testkit_2.12">
-			<revision name="2.5.6" status="release" pubdate="20170929153925" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="87">
+			<revision name="2.5.6" status="release" pubdate="20170929153925" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="88">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3688" time="0" location="/home/mohammedi/.ivy2/cache/com.typesafe.akka/akka-testkit_2.12/ivy-2.5.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.6/akka-testkit_2.12-2.5.6.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.6" rev-constraint-default="2.5.6" rev-constraint-dynamic="2.5.6" callerrev="0.1" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6"/>
@@ -854,7 +854,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalatest" name="scalatest_2.12">
-			<revision name="3.0.4" status="release" pubdate="20170817163359" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">
+			<revision name="3.0.4" status="release" pubdate="20170817163359" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="86">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="4901" time="0" location="/home/mohammedi/.ivy2/cache/org.scalatest/scalatest_2.12/ivy-3.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.4/scalatest_2.12-3.0.4.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.0.4" rev-constraint-default="3.0.4" rev-constraint-dynamic="3.0.4" callerrev="0.1"/>
@@ -878,7 +878,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalactic" name="scalactic_2.12">
-			<revision name="3.0.4" status="release" pubdate="20170817163048" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
+			<revision name="3.0.4" status="release" pubdate="20170817163048" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2967" time="0" location="/home/mohammedi/.ivy2/cache/org.scalactic/scalactic_2.12/ivy-3.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.4/scalactic_2.12-3.0.4.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.0.4" rev-constraint-default="3.0.4" rev-constraint-dynamic="3.0.4" callerrev="0.1"/>
@@ -890,7 +890,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="ssl-config-core_2.12">
-			<revision name="0.2.2" status="release" pubdate="20170308153931" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+			<revision name="0.2.2" status="release" pubdate="20170308153931" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2857" time="0" location="/home/mohammedi/.ivy2/cache/com.typesafe/ssl-config-core_2.12/ivy-0.2.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.2.2/ssl-config-core_2.12-0.2.2.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="0.2.2" rev-constraint-default="0.2.2" rev-constraint-dynamic="0.2.2" callerrev="0.1"/>
@@ -902,7 +902,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.12">
-			<revision name="1.0.4" status="release" pubdate="20161029001045" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
+			<revision name="1.0.4" status="release" pubdate="20161029001045" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="2785" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.0.4/scala-parser-combinators_2.12-1.0.4.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="0.1"/>
@@ -914,7 +914,7 @@
 			</revision>
 		</module>
 		<module organisation="org.reactivestreams" name="reactive-streams">
-			<revision name="1.0.1" status="release" pubdate="20170809112439" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.reactive-streams.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
+			<revision name="1.0.1" status="release" pubdate="20170809112439" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.reactive-streams.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
 				<license name="CC0" url="http://creativecommons.org/publicdomain/zero/1.0/"/>
 				<metadata-artifact status="no" details="" size="2523" time="0" location="/home/mohammedi/.ivy2/cache/org.reactivestreams/reactive-streams/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.1/reactive-streams-1.0.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.1"/>
@@ -926,7 +926,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-actor_2.12">
-			<revision name="2.5.6" status="release" pubdate="20170929153709" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="75">
+			<revision name="2.5.6" status="release" pubdate="20170929153709" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="76">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3099" time="0" location="/home/mohammedi/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/ivy-2.5.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.6/akka-actor_2.12-2.5.6.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.6" rev-constraint-default="2.5.6" rev-constraint-dynamic="2.5.6" callerrev="0.1" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.6"/>
@@ -938,7 +938,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-java8-compat_2.12">
-			<revision name="0.8.0" status="release" pubdate="20161029231227" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
+			<revision name="0.8.0" status="release" pubdate="20161029231227" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="84">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="3036" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.12/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.1"/>
@@ -974,7 +974,7 @@
 			</revision>
 		</module>
 		<module organisation="org.objenesis" name="objenesis">
-			<revision name="2.6" status="release" pubdate="20170620162837" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
+			<revision name="2.6" status="release" pubdate="20170620162837" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3457" time="0" location="/home/mohammedi/.ivy2/cache/org.objenesis/objenesis/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="0.1"/>
@@ -986,7 +986,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-lang3">
-			<revision name="3.3.1" status="release" pubdate="20140315140434" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
+			<revision name="3.3.1" status="release" pubdate="20140315140434" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
 				<metadata-artifact status="no" details="" size="10554" time="0" location="/home/mohammedi/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.3.1/commons-lang3-3.3.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="0.1"/>
 				<artifacts>
@@ -997,7 +997,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-math3">
-			<revision name="3.4.1" status="release" pubdate="20150108182810" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-math/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+			<revision name="3.4.1" status="release" pubdate="20150108182810" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-math/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="11263" time="0" location="/home/mohammedi/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.4.1" rev-constraint-default="3.4.1" rev-constraint-dynamic="3.4.1" callerrev="0.1"/>
@@ -1009,7 +1009,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-io" name="commons-io">
-			<revision name="2.4" status="release" pubdate="20120612232206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
+			<revision name="2.4" status="release" pubdate="20120612232206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8704" time="0" location="/home/mohammedi/.ivy2/cache/commons-io/commons-io/ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="0.1"/>
@@ -1072,7 +1072,7 @@
 			</revision>
 		</module>
 		<module organisation="org.yaml" name="snakeyaml">
-			<revision name="1.12" status="release" pubdate="20130302234606" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
+			<revision name="1.12" status="release" pubdate="20130302234606" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
 				<license name="Apache License Version 2.0" url="LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3558" time="0" location="/home/mohammedi/.ivy2/cache/org.yaml/snakeyaml/ivy-1.12.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.12/snakeyaml-1.12.pom"/>
 				<caller organisation="default" name="mpv-controler$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.12" rev-constraint-default="1.12" rev-constraint-dynamic="1.12" callerrev="0.1"/>

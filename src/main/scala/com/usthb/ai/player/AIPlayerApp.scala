@@ -2,9 +2,10 @@ package com.usthb.ai.player
 
 import akka.actor.ActorSystem
 import com.typesafe.config.ConfigFactory
+import com.usthb.ai.predictor.{Input, Point}
 
 object AIPlayerApp extends App {
-  val system = ActorSystem("mpv-controller", ConfigFactory.load().getConfig("player"))
+  val system = ActorSystem("mpv-controller-system", ConfigFactory.load().getConfig("player"))
   val videoPath = "/home/mohammedi/Videos/ai/"
 
   val player = system.actorOf(MPVPlayer.props, "player")
@@ -16,6 +17,4 @@ object AIPlayerApp extends App {
   val p4 = Point(59.1885757028,10.6789364098,-71.2977813148)
 
   val input = Input(p0, p1, p2, p3, p4)
-
-  val predictor = system.actorOf(Predictor.props(player), "predictor")
 }

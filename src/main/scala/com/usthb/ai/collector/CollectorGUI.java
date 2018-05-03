@@ -1,10 +1,17 @@
 package com.usthb.ai.collector;
 
 import akka.actor.ActorRef;
-import com.usthb.ai.player.Input;
-import com.usthb.ai.player.Point;
+import com.usthb.ai.predictor.Gesture;
+import com.usthb.ai.predictor.Input;
+import com.usthb.ai.predictor.Point;
 import javafx.fxml.FXML;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.Light;
+import javafx.scene.effect.Lighting;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,112 +22,7 @@ import java.util.Optional;
 public class CollectorGUI {
     @FXML
     private
-    TextField x0;
-    @FXML
-    private
-    TextField y0;
-    @FXML
-    private
-    TextField z0;
-    @FXML
-    private
-    TextField x1;
-    @FXML
-    private
-    TextField y1;
-    @FXML
-    private
-    TextField z1;
-    @FXML
-    private
-    TextField x2;
-    @FXML
-    private
-    TextField y2;
-    @FXML
-    private
-    TextField z2;
-    @FXML
-    private
-    TextField x3;
-    @FXML
-    private
-    TextField y3;
-    @FXML
-    private
-    TextField z3;
-    @FXML
-    private
-    TextField x4;
-    @FXML
-    private
-    TextField y4;
-    @FXML
-    private
-    TextField z4;
-    @FXML
-    private
-    TextField x5;
-    @FXML
-    private
-    TextField y5;
-    @FXML
-    private
-    TextField z5;
-    @FXML
-    private
-    TextField x6;
-    @FXML
-    private
-    TextField y6;
-    @FXML
-    private
-    TextField z6;
-    @FXML
-    private
-    TextField x7;
-    @FXML
-    private
-    TextField y7;
-    @FXML
-    private
-    TextField z7;
-    @FXML
-    private
-    TextField x8;
-    @FXML
-    private
-    TextField y8;
-    @FXML
-    private
-    TextField z8;
-    @FXML
-    private
-    TextField x9;
-    @FXML
-    private
-    TextField y9;
-    @FXML
-    private
-    TextField z9;
-    @FXML
-    private
-    TextField x10;
-    @FXML
-    private
-    TextField y10;
-    @FXML
-    private
-    TextField z10;
-    @FXML
-    private
-    TextField x11;
-    @FXML
-    private
-    TextField y11;
-    @FXML
-    private
-    TextField z11;
+    TextField x0, y0, z0, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, x5, y5, z5, x6, y6, z6, x7, y7, z7, x8, y8, z8, x9, y9, z9, x10, y10, z10, x11, y11, z11;
 
     @FXML
     TextField num;
@@ -129,14 +31,71 @@ public class CollectorGUI {
     private
     TextField c;
 
-    private ActorRef predictor;
+    @FXML
+    private VBox images;
 
-    public CollectorGUI(ActorRef predictor) {
-        this.predictor = predictor;
+    @FXML
+    public ProgressIndicator fistIndicator;
+    @FXML
+    public ProgressIndicator stopIndicator;
+    @FXML
+    public ProgressIndicator point1Indicator;
+    @FXML
+    public ProgressIndicator point2Indicator;
+    @FXML
+    public ProgressIndicator grabIndicator;
+
+    private ActorRef collector;
+
+    private Gesture gesture;
+
+    public void setGesture(Gesture gesture) {
+        this.gesture = gesture;
+    }
+
+    public CollectorGUI(ActorRef collector) {
+        this.collector = collector;
+    }
+
+    public CollectorGUI() {
+    }
+
+    public void setCollector(ActorRef collector) {
+        this.collector = collector;
     }
 
     @FXML
-    void send() {
+    void initialize() {
+        fistIndicator.setProgress(0);
+        stopIndicator.setProgress(0);
+        point1Indicator.setProgress(0);
+        point2Indicator.setProgress(0);
+        grabIndicator.setProgress(0);
+
+        Light.Distant light = new Light.Distant();
+        light.setColor(Color.GRAY);
+
+        Lighting lighting = new Lighting(light);
+        lighting.setSurfaceScale(0.5);
+
+
+        images.getChildren().forEach(node -> node.setOnMouseClicked(mouseEvent -> {
+            if (node instanceof ImageView) {
+                ImageView imageView = (ImageView) node;
+                String[] path = imageView.getImage().impl_getUrl().split("/");
+                try {
+                    getFromDataset(path[path.length - 1]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                imageView.setEffect(lighting);
+                images.getChildren().stream().filter(n -> (n instanceof ImageView) && (n != imageView)).forEach(i -> i.setEffect(null));
+            }
+        }));
+    }
+
+    @FXML
+    void predict() {
         Point p0 = new Point(Double.parseDouble(x0.getText()), Double.parseDouble(y0.getText()), Double.parseDouble(z0.getText()));
         Point p1 = new Point(Double.parseDouble(x1.getText()), Double.parseDouble(y1.getText()), Double.parseDouble(z1.getText()));
         Point p2 = new Point(Double.parseDouble(x2.getText()), Double.parseDouble(y2.getText()), Double.parseDouble(z2.getText()));
@@ -150,20 +109,37 @@ public class CollectorGUI {
         Point p10 = new Point(Double.parseDouble(x10.getText()), Double.parseDouble(y10.getText()), Double.parseDouble(z10.getText()));
         Point p11 = new Point(Double.parseDouble(x11.getText()), Double.parseDouble(y11.getText()), Double.parseDouble(z11.getText()));
         Input input = new Input(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11);
-        predictor.tell(input, null);
+        System.out.println("snending input = " + input + " to + " + collector);
+        collector.tell(input, null);
     }
 
     @FXML
-    void getFromDatset() throws IOException {
-        String path = "cleaned.csv";
-        int n = Integer.parseInt(c.getText());
-        Optional<String> ligneOption = Files.lines(Paths.get(path)).skip(1).filter(x -> Double.parseDouble(x.split(",")[0]) == n).findFirst();
+    void send() {
+        collector.tell(gesture, null);
+    }
+
+    void getFromDataset(String cl) throws Exception {
+        int n = 0;
+        switch (cl) {
+            case "fist.jpg": n = 1; break;
+            case "stop.jpg": n = 2; break;
+            case "point1.jpg": n = 3; break;
+            case "point2.jpg": n = 4; break;
+            case "grab.jpg": n = 5; break;
+            default: throw new Exception("can't get class " + cl);
+        }
+        getFromDataset(n);
+    }
+
+    void getFromDataset(int n) throws IOException {
+        String path = "samples.csv";
+        Optional<String> ligneOption = Files.lines(Paths.get(path)).skip(1).filter(x -> Double.parseDouble(x.split(",")[0]) == n).findAny();
         if (ligneOption.isPresent()) {
             String ligne = ligneOption.get();
             System.out.println("ligne = " + ligne);
             double[] features = Arrays.stream(ligne.split(",")).mapToDouble(Double::parseDouble).toArray();
 
-            c.setText(features[0] + "");
+            //c.setText(features[0] + "");
 
             x0.setText(features[2] + "");
             y0.setText(features[3] + "");
@@ -213,5 +189,13 @@ public class CollectorGUI {
             y11.setText(features[36] + "");
             z11.setText(features[37] + "");
         }
+    }
+
+    void updateProgressBars(double[] out) {
+        fistIndicator.setProgress(out[0]);
+        stopIndicator.setProgress(out[1]);
+        point1Indicator.setProgress(out[2]);
+        point2Indicator.setProgress(out[3]);
+        grabIndicator.setProgress(out[4]);
     }
 }

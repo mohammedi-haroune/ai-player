@@ -1,4 +1,4 @@
-name := "mpv-controler"
+name := "ai-player"
 
 version := "0.1"
 

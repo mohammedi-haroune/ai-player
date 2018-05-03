@@ -4,7 +4,7 @@
 		module="mpv-controler_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180423223051"
+		publication="20180501144054"
 	>
 		<description>
 		mpv-controler
@@ -44,5 +44,6 @@
 		<dependency org="org.deeplearning4j" name="deeplearning4j-modelimport" rev="1.0.0-alpha" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe" name="config" rev="1.3.2" conf="compile->default(compile)"/>
 		<dependency org="org.nd4j" name="nd4j-native-platform" rev="1.0.0-alpha" conf="compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-reflect" rev="2.12.5" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

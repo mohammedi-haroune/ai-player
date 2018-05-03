@@ -1,4 +1,20 @@
-[0m[[0m[31merror[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/CollectorApp.scala:37:38: not found: type CG[0m
-[0m[[0m[31merror[0m] [0m[0m    val c = fxmlLoader.getController[CG][0m
-[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/com/usthb/ai/collector/CollectorApp.scala:12:31: imported `CollectorGUI' is permanently hidden by definition of class CollectorGUI in package collector[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport com.usthb.ai.collector.CollectorGUI[0m
+[0m[[0m[33mwarn[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/com/usthb/ai/player/ActionDecoder.scala:11:21: not found: value config[0m
+[0m[[0m[31merror[0m] [0m[0m      val cmd = s"${config.getString(s"$state.$gestureName")}"[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/com/usthb/ai/player/ActionDecoder.scala:11:41: not found: value state[0m
+[0m[[0m[31merror[0m] [0m[0m      val cmd = s"${config.getString(s"$state.$gestureName")}"[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/com/usthb/ai/player/MPVPlayer.scala:8:8: object runtime is not a member of package reflect[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.reflect.runtime[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/com/usthb/ai/player/MPVPlayer.scala:57:27: not found: value universe[0m
+[0m[[0m[31merror[0m] [0m[0m      val runtimeMirror = universe.runtimeMirror(getClass.getClassLoader)[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/src/main/scala/com/usthb/ai/player/Predictor.scala:104:61: no arguments allowed for nullary constructor Predictor: ()com.usthb.ai.player.Predictor[0m
+[0m[[0m[31merror[0m] [0m[0m  def props(handler: ActorRef): Props = Props(new Predictor(handler))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

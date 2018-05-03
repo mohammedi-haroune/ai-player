@@ -1,4 +1,4 @@
-[error] /home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/project/Dependencies.scala:74:55: value kafka is not a member of object Version
-[error]   val kafka = "org.apache.kafka" %% "kafka" % Version.kafka
-[error]                                                       ^
+[error] /home/mohammedi/studiesspace/mahine-learning/project/mpv-controler/project/Dependencies.scala:61:75: `value` can only be used within a task or setting macro, such as :=, +=, ++=, Def.task, or Def.setting.
+[error]   val scalaReflection = "org.scala-lang" % "scala-reflect" % scalaVersion.value
+[error]                                                                           ^
 [error] one error found

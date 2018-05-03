@@ -7,8 +7,20 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180423223051"/>
+		date="20180501144054"/>
 	<dependencies>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.12.5" status="release" pubdate="20180316144401" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.5/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="95">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.5/scala-reflect-2.12.5.pom"/>
+				<caller organisation="default" name="mpv-controler_2.12" conf="compile" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3602589" time="0" location="/home/mohammedi/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.5/scala-reflect-2.12.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.nd4j" name="nd4j-native-platform">
 			<revision name="1.0.0-alpha" status="release" pubdate="20180405082551" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="88">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
@@ -1537,6 +1549,7 @@
 				<caller organisation="com.typesafe" name="ssl-config-core_2.12" conf="compile, runtime" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="0.2.2"/>
 				<caller organisation="com.typesafe.akka" name="akka-parsing_2.12" conf="compile, runtime" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="10.0.10"/>
 				<caller organisation="com.typesafe.akka" name="akka-actor_2.12" conf="default, compile, runtime, master" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="2.5.6"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="default, compile, runtime, master" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="2.12.5"/>
 				<caller organisation="default" name="mpv-controler_2.12" conf="compile" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="0.1"/>
 				<caller organisation="com.typesafe.akka" name="akka-protobuf_2.12" conf="compile, runtime" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="2.5.6"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.12" conf="default, compile, runtime, master" rev="2.12.5" rev-constraint-default="2.12.5" rev-constraint-dynamic="2.12.5" callerrev="2.5.6"/>

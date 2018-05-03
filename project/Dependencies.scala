@@ -1,3 +1,4 @@
+import sbt.Keys.scalaVersion
 import sbt._
 
 object Version {
@@ -28,6 +29,7 @@ object Version {
   var embededKafka = "1.1.0"
   val nd4j = "1.0.0-alpha"
   val dl4j = "1.0.0-alpha"
+  val scala = "2.12.5"
 }
 
 object Library {
@@ -57,6 +59,8 @@ object Library {
   val slf4j = "org.slf4j" % "slf4j-simple" % Version.slf4j
   val slf4jApi = "org.slf4j" % "slf4j-api" % Version.slf4j
   val cats = "org.typelevel" %% "cats-core" % Version.cats
+  val scalaReflection = "org.scala-lang" % "scala-reflect" % Version.scala
+
   val msgPack = "org.msgpack" %% "msgpack-scala" % Version.msgPack
   val argonaut = "io.argonaut" %% "argonaut" % Version.argonaut
   val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % Version.akka
@@ -98,6 +102,7 @@ object Dependencies {
     scalaTest % Test,
     dl4jModelImport,
     typesafe,
-    nd4jNative
+    nd4jNative,
+    scalaReflection
   )
 }
