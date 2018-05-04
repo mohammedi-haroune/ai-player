@@ -6,6 +6,10 @@ scalaVersion := "2.12.5"
 
 libraryDependencies ++= Dependencies.dep
 
+//Javafx8 library
+unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
+
+
 lazy val commonSettings = Seq(
   name := "ai-player",
   version := "0.1",
@@ -26,3 +30,4 @@ lazy val aiPlayer = (project in file("."))
       case _                          => MergeStrategy.first
     }
   )
+

@@ -87,9 +87,7 @@ object Dependencies {
     akkaRemote,
     slf4j,
     slf4jApi,
-    dl4jModelImport,
     typesafe,
-    nd4jNative,
     scalaReflection,
     clistCore,
     clistMacros
