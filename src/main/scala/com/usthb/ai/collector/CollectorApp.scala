@@ -2,7 +2,7 @@ package com.usthb.ai.collector
 
 import akka.actor.ActorSystem
 import com.typesafe.config.ConfigFactory
-import com.usthb.ai.CmdLineApp
+import com.usthb.ai.main.CmdLineApp
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.layout.HBox

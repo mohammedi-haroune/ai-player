@@ -1,8 +1,8 @@
-package com.usthb.ai
+package com.usthb.ai.main
 
 import com.typesafe.config.ConfigFactory
 import com.usthb.ai.collector.CollectorApp
-import com.usthb.ai.player.PlayerControllerApp
+import com.usthb.ai.controller.PlayerControllerApp
 import com.usthb.ai.predictor.PredictorApp
 import org.backuity.clist._
 

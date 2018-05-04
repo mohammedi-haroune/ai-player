@@ -1,8 +1,8 @@
-package com.usthb.ai.player
+package com.usthb.ai.controller
 
 import akka.actor.ActorSystem
 import com.typesafe.config.ConfigFactory
-import com.usthb.ai.CmdLineApp
+import com.usthb.ai.main.CmdLineApp
 import org.backuity.clist._
 
 object PlayerControllerApp

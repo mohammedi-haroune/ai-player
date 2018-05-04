@@ -1,4 +1,4 @@
-package com.usthb.ai.player
+package com.usthb.ai.controller
 
 import java.io.{BufferedWriter, File}
 import java.nio.file.{Files, Paths}

@@ -66,7 +66,7 @@ case class Input(p0: Point = Point(),
     )
 }
 
-class Predictor extends Actor with DiagnosticActorLogging {
+class Predictor(python: String) extends Actor with DiagnosticActorLogging {
   override def receive: Receive = {
     LoggingReceive {
       case input: Input =>
@@ -77,11 +77,11 @@ class Predictor extends Actor with DiagnosticActorLogging {
 
   def predict(input: Input): Array[Double] = {
     val i = input.toArray.mkString("[", ",", "]")
-    val o = sys.process.Process(Seq("/home/mohammedi/anaconda3/bin/python", "predict.py", i), new java.io.File(System.getProperty("user.dir"))).!!
+    val o = sys.process.Process(Seq(python, "predict.py", i), new java.io.File(System.getProperty("user.dir"))).!!
     o.substring(2, o.length - 3).split(" ").map(_.toDouble)
   }
 }
 
 object Predictor {
-  def props(): Props = Props(new Predictor())
+  def props(python: String): Props = Props(new Predictor(python))
 }
