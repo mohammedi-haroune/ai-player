@@ -11,7 +11,13 @@ import javafx.stage.Stage
 import org.backuity.clist._
 
 object CollectorApp
-    extends Command(name = "collector-app", description = "collector-app")
+    extends Command(
+      name = "collector-app",
+      description =
+        "Collector collect the input (points coordinates), " +
+          "send them to predictor to detect the gesture and then " +
+          "to the controller to interact with the player"
+    )
     with CmdLineApp {
   override def run(): Unit = {
     Application.launch(classOf[CollectorApp], null)
@@ -22,7 +28,8 @@ class CollectorApp extends Application {
 
   @throws[Exception]
   override def start(stage: Stage): Unit = {
-    val system = ActorSystem("collector-system", CollectorApp.conf.getConfig("collector"))
+    val system =
+      ActorSystem("collector-system", CollectorApp.conf.getConfig("collector"))
     val controller = new CollectorGUI()
     val collector =
       system.actorOf(CollectorActor.props(controller), "collector")
