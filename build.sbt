@@ -17,7 +17,9 @@ organization := "USHTB"
 enablePlugins(JavaAppPackaging)
 
 assemblyJarName in assembly := "ai-player.jar"
-mainClass := Some("com.usthb.ai.AIPlayer")
+
+mainClass := Some("com.usthb.ai.main.AIPlayer")
+
 assemblyMergeStrategy in assembly := {
   case PathList("reference.conf") => MergeStrategy.concat
   case "application.conf"         => MergeStrategy.concat
