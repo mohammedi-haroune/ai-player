@@ -2,9 +2,6 @@ package com.usthb.ai.predictor
 
 import akka.actor.{Actor, DiagnosticActorLogging, Props}
 import akka.event.LoggingReceive
-import org.deeplearning4j.nn.modelimport.keras.KerasModelImport
-import org.deeplearning4j.nn.multilayer.MultiLayerNetwork
-import org.nd4j.linalg.factory.Nd4j
 
 sealed trait Gesture
 case object Stop extends Gesture
@@ -70,10 +67,6 @@ case class Input(p0: Point = Point(),
 }
 
 class Predictor extends Actor with DiagnosticActorLogging {
-  val modelPath = "model.h5"
-  val model: MultiLayerNetwork =
-    KerasModelImport.importKerasSequentialModelAndWeights(modelPath)
-
   override def receive: Receive = {
     LoggingReceive {
       case input: Input =>
@@ -83,7 +76,9 @@ class Predictor extends Actor with DiagnosticActorLogging {
   }
 
   def predict(input: Input): Array[Double] = {
-    model.output(Nd4j.create(input.toArray)).toDoubleVector
+    val i = input.toArray.mkString("[", ",", "]")
+    val o = sys.process.Process(Seq("/home/mohammedi/anaconda3/bin/python", "predict.py", i), new java.io.File(System.getProperty("user.dir"))).!!
+    o.substring(2, o.length - 3).split(" ").map(_.toDouble)
   }
 }
 
