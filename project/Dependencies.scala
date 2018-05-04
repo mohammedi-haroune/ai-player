@@ -22,7 +22,7 @@ object Version {
   val slick = "3.2.1"
   val alpakkaSlick = "0.14"
   val postgresql = "42.1.4"
-  val clist = "3.3.0"
+  val clist = "3.4.0"
   val elasticTest = "6.1.2.0"
   val firebase = "5.8.0"
   val zk = "0.10"
@@ -35,17 +35,13 @@ object Version {
 object Library {
   val typesafe = "com.typesafe" % "config" % Version.typesafe
   val akka = "com.typesafe.akka" %% "akka-actor" % Version.akka
-
   val slick = "com.typesafe.slick" % "slick_2.12" % Version.slick
   val hikaricpSlick = "com.typesafe.slick" %% "slick-hikaricp" % Version.slick
   val alpakkaSlick = "com.lightbend.akka" %% "akka-stream-alpakka-slick" % Version.alpakkaSlick
   val postgressql = "org.postgresql" % "postgresql" % Version.postgresql
-
   val akkaPersistence = "com.typesafe.akka" %% "akka-persistence" % Version.akka
   val akkaCluster = "com.typesafe.akka" %% "akka-cluster" % Version.akka
-
   val akkaHttp = "com.typesafe.akka" %% "akka-http" % Version.akkaHttp
-
   val akkaStream = "com.typesafe.akka" %% "akka-stream" % Version.akka
   val akkaStreamKafka = "com.typesafe.akka" %% "akka-stream-kafka" % Version.akkaStreamKafka
   val protobuf = "com.google.protobuf" % "protobuf-java" % Version.protobuf
@@ -53,14 +49,11 @@ object Library {
   val akkaTestKit = "com.typesafe.akka" %% "akka-testkit" % Version.akka
   val akkaStreamTestKit = "com.typesafe.akka" %% "akka-stream-testkit" % Version.akka
   val akkaRemote = "com.typesafe.akka" %% "akka-remote" % Version.akka
-
-
   val scalaTest = "org.scalatest" %% "scalatest" % Version.scalaTest
   val slf4j = "org.slf4j" % "slf4j-simple" % Version.slf4j
   val slf4jApi = "org.slf4j" % "slf4j-api" % Version.slf4j
   val cats = "org.typelevel" %% "cats-core" % Version.cats
   val scalaReflection = "org.scala-lang" % "scala-reflect" % Version.scala
-
   val msgPack = "org.msgpack" %% "msgpack-scala" % Version.msgPack
   val argonaut = "io.argonaut" %% "argonaut" % Version.argonaut
   val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % Version.akka
@@ -81,7 +74,6 @@ object Library {
   val firebase = "com.google.firebase" % "firebase-admin" % Version.firebase
   val zk = "com.101tec" % "zkclient" % Version.zk
   val embeddedKafka = "net.manub" %% "scalatest-embedded-kafka" % Version.embededKafka
-
   val dl4jModelImport = "org.deeplearning4j" % "deeplearning4j-modelimport" % Version.dl4j
   val nd4jNative = "org.nd4j" % "nd4j-native-platform" % Version.nd4j
 }
@@ -92,17 +84,14 @@ object Dependencies {
 
   val dep = Seq(
     akka,
-    akkaStream,
-    akkaHttp,
     akkaRemote,
     slf4j,
     slf4jApi,
-    akkaTestKit % Test,
-    akkaStreamTestKit % Test,
-    scalaTest % Test,
     dl4jModelImport,
     typesafe,
     nd4jNative,
-    scalaReflection
+    scalaReflection,
+    clistCore,
+    clistMacros
   )
 }
