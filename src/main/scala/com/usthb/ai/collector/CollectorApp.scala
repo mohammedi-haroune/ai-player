@@ -22,8 +22,7 @@ class CollectorApp extends Application {
 
   @throws[Exception]
   override def start(stage: Stage): Unit = {
-    val system = ActorSystem("collector-system",
-                             ConfigFactory.load().getConfig("collector"))
+    val system = ActorSystem("collector-system", CollectorApp.conf.getConfig("collector"))
     val controller = new CollectorGUI()
     val collector =
       system.actorOf(CollectorActor.props(controller), "collector")

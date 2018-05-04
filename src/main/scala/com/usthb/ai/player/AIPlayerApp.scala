@@ -15,8 +15,7 @@ object AIPlayerApp
                                       default = s"${sys.env("HOME")}/Videos/")
 
   override def run(): Unit = {
-    val system = ActorSystem("mpv-controller-system",
-                             ConfigFactory.load().getConfig("player"))
+    val system = ActorSystem("mpv-controller-system", conf.getConfig("player"))
     val player = system.actorOf(MPVPlayer.props(videoPath), "player")
   }
 }
