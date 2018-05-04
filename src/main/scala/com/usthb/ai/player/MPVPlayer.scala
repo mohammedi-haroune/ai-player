@@ -38,7 +38,7 @@ case object SpeedDown extends StaticAction
 
 sealed trait Data
 case object Empty extends Data
-class MPVPlayer extends LoggingFSM[State, Data] {
+class MPVPlayer(videoPath: String) extends LoggingFSM[State, Data] {
 
   import MPVPlayer._
 
@@ -69,8 +69,9 @@ class MPVPlayer extends LoggingFSM[State, Data] {
   }
   whenUnhandled {
     case Event(gesture: Gesture, _) =>
-      val config = ConfigFactory
-        .parseFile(new File(getClass.getResource("/commands.conf").getFile))
+      val config = ConfigFactory.parseFile(new File("commands.conf"))
+
+      log.debug("config", config.origin().filename())
 
       val state = stateName.getClass.getSimpleName.filter(_ != '$').toLowerCase
       val gestureName =
@@ -85,6 +86,7 @@ class MPVPlayer extends LoggingFSM[State, Data] {
       log.debug("state : {}", stateName)
       self ! cmdObject.asInstanceOf[Action]
       stay()
+
     case Event(Refresh, _) =>
       log.info("refreshing states when {}", stateName)
       if (process == null) {
@@ -109,12 +111,10 @@ class MPVPlayer extends LoggingFSM[State, Data] {
   }
 }
 object MPVPlayer {
-  def props: Props = Props(new MPVPlayer())
+  def props(videoPath: String): Props = Props(new MPVPlayer(videoPath))
 
   val commandsPath = "/tmp/mpvsend"
   val ipcPath = "/tmp/mpvsocket"
-
-  val videoPath = "/home/mohammedi/Videos/ai/"
 
   val actions = Map[Action, String](
     Play -> """{ "command": ["set_property", "pause", true] }""",

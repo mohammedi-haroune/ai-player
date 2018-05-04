@@ -71,7 +71,6 @@ case class Input(p0: Point = Point(),
 
 class Predictor extends Actor with DiagnosticActorLogging {
   val modelPath = "model.h5"
-  val weightsPath = "weights.h5"
   val model: MultiLayerNetwork =
     KerasModelImport.importKerasSequentialModelAndWeights(modelPath)
 

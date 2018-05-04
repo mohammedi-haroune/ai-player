@@ -2,25 +2,35 @@ package com.usthb.ai.collector
 
 import akka.actor.ActorSystem
 import com.typesafe.config.ConfigFactory
+import com.usthb.ai.CmdLineApp
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.layout.HBox
 import javafx.scene.{Node, Scene}
 import javafx.stage.Stage
+import org.backuity.clist._
 
-object CollectorApp extends App {
-  Application.launch(classOf[CollectorApp], args: _*)
+object CollectorApp
+    extends Command(name = "collector-app", description = "collector-app")
+    with CmdLineApp {
+  override def run(): Unit = {
+    Application.launch(classOf[CollectorApp], null)
+  }
 }
 
 class CollectorApp extends Application {
 
   @throws[Exception]
   override def start(stage: Stage): Unit = {
-    val system = ActorSystem("collector-system", ConfigFactory.load().getConfig("collector"))
+    val system = ActorSystem("collector-system",
+                             ConfigFactory.load().getConfig("collector"))
     val controller = new CollectorGUI()
-    val collector = system.actorOf(CollectorActor.props(controller), "collector")
+    val collector =
+      system.actorOf(CollectorActor.props(controller), "collector")
     controller.setCollector(collector)
-    val fxmlLoader = new FXMLLoader(getClass.getResource("/fxml/collector.fxml"))
+    val fxmlLoader = new FXMLLoader(
+      getClass.getResource("/fxml/collector.fxml"))
+
     fxmlLoader.setController(controller)
     val root = fxmlLoader.load[HBox]()
 
