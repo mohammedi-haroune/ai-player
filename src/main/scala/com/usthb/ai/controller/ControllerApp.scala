@@ -5,7 +5,7 @@ import com.typesafe.config.ConfigFactory
 import com.usthb.ai.main.CmdLineApp
 import org.backuity.clist._
 
-object PlayerControllerApp
+object ControllerApp
     extends Command(
       name = "controller-app",
       description =

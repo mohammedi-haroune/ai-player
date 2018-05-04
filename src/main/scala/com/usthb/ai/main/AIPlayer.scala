@@ -2,7 +2,7 @@ package com.usthb.ai.main
 
 import com.typesafe.config.ConfigFactory
 import com.usthb.ai.collector.CollectorApp
-import com.usthb.ai.controller.PlayerControllerApp
+import com.usthb.ai.controller.ControllerApp
 import com.usthb.ai.predictor.PredictorApp
 import org.backuity.clist._
 
@@ -27,7 +27,7 @@ object AIPlayer {
           "daemon application to run collector, controller, and predictor apps")
         .withCommands(
           CollectorApp,
-          PlayerControllerApp,
+          ControllerApp,
           PredictorApp
         )
     } yield app.run()

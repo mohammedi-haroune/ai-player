@@ -6,7 +6,7 @@ scalaVersion := "2.12.5"
 
 libraryDependencies ++= Dependencies.dep
 
-maintainer := "MOHAMMEDI Haroune <hmh@big-mama.io>"
+maintainer := "MOHAMMEDI Haroune <hm@big-mama.io>"
 
 packageSummary := "AI Player"
 
