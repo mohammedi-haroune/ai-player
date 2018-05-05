@@ -45,7 +45,7 @@ At this writing time we've just packaged to `jar` and `deb`. other platforms wil
 
 #### Build Jar
 ```bash
-git clone 
+git clone https://github.com/mohammedi-haroune/ai-player
 cd ai-player
 sbt assembly
 ```
@@ -53,7 +53,7 @@ You will find the outoput in the `target` directory `target/ai-player.jar`
 
 #### Package binaries
 ```bash
-git clone 
+git clone https://github.com/mohammedi-haroune/ai-player
 cd ai-player
 sbt <os>:packageBin
 ```
@@ -63,7 +63,7 @@ for more information refer to [sbt-native-packager official docs](https://www.sc
 You will find the outoput in the `target` directory
 
 ### Using intellij idea IDE
-1. Clone the repo `git clone <repo>`
+1. Clone the repo `git clone https://github.com/mohammedi-haroune/ai-player`
 2. Import the project as an sbt project
 3. Create a run configuration with
     - main = `com.usthb.ai.main.AIPlayer`
