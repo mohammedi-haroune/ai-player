@@ -22,7 +22,7 @@ pass them to the trained model and send output (gestures predictions)
     - keras
     - numpy
 
-##How to use ?
+## How to use ?
 In order to run the different applications we provide a simple daemon CLI (commande line interface).
 
 We've worked very hard to make it the more self explanatory possible, just use the help
@@ -30,12 +30,12 @@ option to get in touch with how to run make it run
 
 To use this CLI you have different options : 
 
-###Install binaries
+### Install binaries
 1. Download and install the binary from <url>
 2. The CLI command will be available in the path
 3. Run `ai-player help`
 
-###Build from source
+### Build from source
 #### Requirements
 - jdk >= 1.8
 - sbt >= 1.0
@@ -60,7 +60,7 @@ for more information refer to [sbt-native-packager official docs](https://www.sc
 
 You will find the outoput in the `target` directory
 
-###Using intellij idea IDE
+### Using intellij idea IDE
 1. Clone the repo `git clone <repo>`
 2. Import the project as an sbt project
 3. Create a run configuration with
