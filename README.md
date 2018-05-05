@@ -1,6 +1,13 @@
 # AI Player
 An Artificial Intelligence media player that can be controlled with hand postures
 
+# Important !!
+We are so galde you are here !! Welcome to our first release of AI Player:D !! First of all thank you for visiting us. 
+
+We would really appreciate if you could give us some of your precious time and try to undrestand, install, test our first release.
+
+Your Feedback is Valuable to Us
+
 # Architecture
 The project is made of three standalone applications : 
 1. **collector-app :** Collector collect the input (points coordinates), 
