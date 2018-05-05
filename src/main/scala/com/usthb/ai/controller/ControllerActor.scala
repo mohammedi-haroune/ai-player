@@ -4,7 +4,7 @@ import java.io.{BufferedWriter, File}
 import java.nio.file.{Files, Paths}
 
 import akka.actor.{FSM, LoggingFSM, Props}
-import com.typesafe.config.ConfigFactory
+import com.typesafe.config.{Config, ConfigFactory}
 import com.usthb.ai.predictor.Gesture
 
 import scala.collection.JavaConverters._
@@ -38,7 +38,7 @@ case object SpeedDown extends StaticAction
 
 sealed trait Data
 case object Empty extends Data
-class MPVPlayer(videoPath: String) extends LoggingFSM[State, Data] {
+class MPVPlayer(videoPath: String, commandsPath: String) extends LoggingFSM[State, Data] {
 
   import MPVPlayer._
 
@@ -69,7 +69,7 @@ class MPVPlayer(videoPath: String) extends LoggingFSM[State, Data] {
   }
   whenUnhandled {
     case Event(gesture: Gesture, _) =>
-      val config = ConfigFactory.parseFile(new File("commands.conf"))
+      val config = ConfigFactory.parseFile(new File(commandsPath))
 
       log.debug("config", config.origin().filename())
 
@@ -111,7 +111,7 @@ class MPVPlayer(videoPath: String) extends LoggingFSM[State, Data] {
   }
 }
 object MPVPlayer {
-  def props(videoPath: String): Props = Props(new MPVPlayer(videoPath))
+  def props(videoPath: String, commandsPath: String): Props = Props(new MPVPlayer(videoPath, commandsPath))
 
   val commandsPath = "/tmp/mpvsend"
   val ipcPath = "/tmp/mpvsocket"

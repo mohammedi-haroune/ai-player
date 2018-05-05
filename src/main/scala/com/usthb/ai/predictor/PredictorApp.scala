@@ -5,7 +5,7 @@ import java.io.File
 import akka.actor.ActorSystem
 import com.typesafe.config.{ConfigFactory, ConfigRenderOptions}
 import com.usthb.ai.main.CmdLineApp
-import org.backuity.clist.{Command, opt}
+import org.backuity.clist._
 
 object PredictorApp
     extends Command(
@@ -14,10 +14,12 @@ object PredictorApp
         "Predictor receive input (points coordinates), pass them to the trained model and send output (gestures predictions)"
     )
     with CmdLineApp {
-  var python = opt[String](
-    default = "not stated",
+
+  var python = arg[String](
+    name = "python",
     description =
       "path to python that must have tensorflow, kears, numpy installed")
+
 
   var model = opt[String](
     default = "model.h5",

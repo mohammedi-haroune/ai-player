@@ -1,5 +1,7 @@
 package com.usthb.ai.controller
 
+import java.io.File
+
 import akka.actor.ActorSystem
 import com.typesafe.config.ConfigFactory
 import com.usthb.ai.main.CmdLineApp
@@ -18,8 +20,14 @@ object ControllerApp
                               required = false,
                               default = s"${sys.env("HOME")}/Videos/")
 
+  var commandsPath = opt[String](
+    description =
+      "path to commands configuration file. refer to README for more information",
+    default = "commands.conf")
+
   override def run(): Unit = {
     val system = ActorSystem("mpv-controller-system", conf.getConfig("player"))
-    val player = system.actorOf(MPVPlayer.props(videoPath), "player")
+    val player =
+      system.actorOf(MPVPlayer.props(videoPath, commandsPath), "player")
   }
 }
