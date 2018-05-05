@@ -31,7 +31,9 @@ option to get in touch with how to run make it run
 To use this CLI you have different options : 
 
 ### Install binaries
-1. Download and install the binary from <url>
+At this writing time we've just packaged to `jar` and `deb`. other platforms will be added very soon
+
+1. Download and install the binary from [realeses](https://github.com/mohammedi-haroune/ai-player/releases)
 2. The CLI command will be available in the path
 3. Run `ai-player help`
 
