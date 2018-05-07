@@ -16,8 +16,6 @@ organization := "usthb"
 
 enablePlugins(JavaAppPackaging)
 
-assemblyJarName in assembly := "ai-player.jar"
-
 mainClass := Some("com.usthb.ai.main.AIPlayer")
 
 assemblyMergeStrategy in assembly := {
