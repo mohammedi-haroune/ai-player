@@ -85,6 +85,7 @@ class MPVPlayer(videoPath: String, commandsPath: String) extends LoggingFSM[Stat
       log.debug("reflected type: {}", cmdObject)
       log.debug("state : {}", stateName)
       self ! cmdObject.asInstanceOf[Action]
+      sender() ! cmdObject.asInstanceOf[Action]
       stay()
 
     case Event(Refresh, _) =>
