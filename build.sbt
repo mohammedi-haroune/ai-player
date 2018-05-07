@@ -1,6 +1,6 @@
 name := "ai-player"
 
-version := "0.1"
+version := "0.2"
 
 scalaVersion := "2.12.5"
 
@@ -12,7 +12,7 @@ packageSummary := "AI Player"
 
 packageDescription := """AI Player a media player that can be controlled with hand postures."""
 
-organization := "USHTB"
+organization := "usthb"
 
 enablePlugins(JavaAppPackaging)
 
