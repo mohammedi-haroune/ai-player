@@ -1,9 +1,6 @@
 package com.usthb.ai.predictor
 
-import java.io.File
-
 import akka.actor.ActorSystem
-import com.typesafe.config.{ConfigFactory, ConfigRenderOptions}
 import com.usthb.ai.main.CmdLineApp
 import org.backuity.clist._
 
@@ -28,6 +25,6 @@ object PredictorApp
 
   override def run(): Unit = {
     val system = ActorSystem("predictor-system", conf.getConfig("predictor"))
-    val predictor = system.actorOf(Predictor.props(python, model), "predictor")
+    val predictor = system.actorOf(PredictorActor.props(python, model), "predictor")
   }
 }

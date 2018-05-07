@@ -1,5 +1,7 @@
 package com.usthb.ai.predictor
 
+import java.io.{File => JFile}
+
 import akka.actor.{Actor, DiagnosticActorLogging, Props}
 import akka.event.LoggingReceive
 
@@ -66,7 +68,7 @@ case class Input(p0: Point = Point(),
     )
 }
 
-class Predictor(python: String, model: String) extends Actor with DiagnosticActorLogging {
+class PredictorActor(python: String, model: String) extends Actor with DiagnosticActorLogging {
   override def receive: Receive = {
     LoggingReceive {
       case input: Input =>
@@ -77,11 +79,12 @@ class Predictor(python: String, model: String) extends Actor with DiagnosticActo
 
   def predict(input: Input): Array[Double] = {
     val i = input.toArray.mkString("[", ",", "]")
-    val o = sys.process.Process(Seq(python, "predict.py", model, i), new java.io.File(System.getProperty("user.dir"))).!!
+    val scriptPath = "predict.py"
+    val o = sys.process.Process(Seq(python, scriptPath, model, i), new java.io.File(System.getProperty("user.dir"))).!!
     o.substring(2, o.length - 3).split(" ").map(_.toDouble)
   }
 }
 
-object Predictor {
-  def props(python: String, model: String): Props = Props(new Predictor(python, model))
+object PredictorActor {
+  def props(python: String, model: String): Props = Props(new PredictorActor(python, model))
 }
