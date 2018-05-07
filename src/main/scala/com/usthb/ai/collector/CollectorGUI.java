@@ -1,16 +1,19 @@
 package com.usthb.ai.collector;
 
 import akka.actor.ActorRef;
+import com.usthb.ai.controller.Action;
 import com.usthb.ai.predictor.Gesture;
 import com.usthb.ai.predictor.Input;
 import com.usthb.ai.predictor.Point;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.Light;
 import javafx.scene.effect.Lighting;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 
 import java.io.IOException;
@@ -32,7 +35,7 @@ public class CollectorGUI {
     TextField c;
 
     @FXML
-    private VBox images;
+    private HBox images;
 
     @FXML
     public ProgressIndicator fistIndicator;
@@ -44,6 +47,10 @@ public class CollectorGUI {
     public ProgressIndicator point2Indicator;
     @FXML
     public ProgressIndicator grabIndicator;
+    @FXML
+    public Button predict;
+    @FXML
+    public Button send;
 
     private ActorRef collector;
 
@@ -66,6 +73,9 @@ public class CollectorGUI {
 
     @FXML
     void initialize() {
+        send.setDisable(true);
+        predict.setDisable(true);
+
         fistIndicator.setProgress(0);
         stopIndicator.setProgress(0);
         point1Indicator.setProgress(0);
@@ -79,19 +89,24 @@ public class CollectorGUI {
         lighting.setSurfaceScale(0.5);
 
 
-        images.getChildren().forEach(node -> node.setOnMouseClicked(mouseEvent -> {
+        images.getChildren().forEach(node -> {
             if (node instanceof ImageView) {
-                ImageView imageView = (ImageView) node;
-                String[] path = imageView.getImage().impl_getUrl().split("/");
-                try {
-                    getFromDataset(path[path.length - 1]);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                imageView.setEffect(lighting);
-                images.getChildren().stream().filter(n -> (n instanceof ImageView) && (n != imageView)).forEach(i -> i.setEffect(null));
+            node.setOnMouseClicked(mouseEvent -> {
+                send.setDisable(true);
+                predict.setDisable(false);
+
+                    ImageView imageView = (ImageView) node;
+                    String[] path = imageView.getImage().impl_getUrl().split("/");
+                    try {
+                        getFromDataset(path[path.length - 1]);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    imageView.setEffect(lighting);
+                    images.getChildren().stream().filter(n -> (n instanceof ImageView) && (n != imageView)).forEach(i -> i.setEffect(null));
+                });
             }
-        }));
+        });
     }
 
     @FXML
@@ -132,8 +147,12 @@ public class CollectorGUI {
     }
 
     void getFromDataset(int n) throws IOException {
-        String path = "samples.csv";
-        Optional<String> ligneOption = Files.lines(Paths.get(path)).skip(1).filter(x -> Double.parseDouble(x.split(",")[0]) == n).findAny();
+        Optional<String> ligneOption = Files
+                .lines(Paths.get("samples.csv"))
+                .skip(1)
+                .filter(x -> Double.parseDouble(x.split(",")[0]) == n)
+                .findAny();
+
         if (ligneOption.isPresent()) {
             String ligne = ligneOption.get();
             System.out.println("ligne = " + ligne);
@@ -197,5 +216,37 @@ public class CollectorGUI {
         point1Indicator.setProgress(out[2]);
         point2Indicator.setProgress(out[3]);
         grabIndicator.setProgress(out[4]);
+        send.setDisable(false);
+    }
+
+    void predictorNotFound() {
+        showPopup(Alert.AlertType.WARNING, "Predictor not found", "you can start it using :",  "ai-player predictor-app <python-path>");
+    }
+
+    void playerNotFound() {
+        showPopup(Alert.AlertType.WARNING, "Player not found", "you can start it using :", "ai-player player-app <video-path>");
+    }
+
+    void noCommandFound() {
+        showPopup(Alert.AlertType.ERROR, "No action found", "No action found for the given gesture", "you can configure one using the configuration application");
+    }
+
+    void actionExecuted(Action action) {
+        showPopup(Alert.AlertType.INFORMATION, "Successful Action","Executed Action Successfully : " + action.toString());
+    }
+
+    void showPopup(Alert.AlertType type, String title, String header, String content) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    void showPopup(Alert.AlertType type, String title, String header) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.showAndWait();
     }
 }

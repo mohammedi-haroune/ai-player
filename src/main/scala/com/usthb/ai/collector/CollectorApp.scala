@@ -5,7 +5,8 @@ import com.typesafe.config.ConfigFactory
 import com.usthb.ai.main.CmdLineApp
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
-import javafx.scene.layout.HBox
+import javafx.scene.image.Image
+import javafx.scene.layout.{HBox, VBox}
 import javafx.scene.{Node, Scene}
 import javafx.stage.Stage
 import org.backuity.clist._
@@ -38,7 +39,7 @@ class CollectorApp extends Application {
       getClass.getResource("/fxml/collector.fxml"))
 
     fxmlLoader.setController(controller)
-    val root = fxmlLoader.load[HBox]()
+    val root = fxmlLoader.load[VBox]()
 
     println(s"collector = ${collector}")
     println(s"system = ${system}")
@@ -52,6 +53,8 @@ class CollectorApp extends Application {
     val t = getClass.getResource(materialTheme).toExternalForm
     scene.getStylesheets.add(t)
     stage.setScene(scene)
+
+    stage.getIcons.add(new Image(getClass.getResource("/icon.png").toExternalForm))
     stage.show()
   }
 }
